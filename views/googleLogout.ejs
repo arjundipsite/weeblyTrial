@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Log in</title>
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Montserrat:400,700'>
+    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+    <script>
+      function signinCallback(authResult) {
+        if (authResult['status']['signed_in']) {
+          // Update the app to reflect a signed in user
+          // Hide the sign-in button now that the user is authorized, for example:
+              gapi.auth.signOut();
+
+          console.log('user is signing out');
+          
+        } else {
+          // Update the app to reflect a signed out user
+          // Possible error values:
+          //   "user_signed_out" - User is signed-out
+          //   "access_denied" - User denied access to your app
+          //   "immediate_failed" - Could not automatically log in the user
+          console.log('Sign-in state: ' + authResult['error'] + 'redirect to googleLogin');
+          window.location.href ="http://localhost:1337/googleLogin";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button id="signinButton"
+          class="g-signin"
+          data-callback="signinCallback"
+          data-clientid="140694561323-n5vetlrqoede6ji2i8j3is85i5rpabii.apps.googleusercontent.com"
+          data-cookiepolicy="single_host_origin"
+          data-requestvisibleactions="http://schema.org/AddAction"
+          data-scope="https://www.googleapis.com/auth/plus.login">
+    </button>
+      <!-- <div class="login-content">
+        <a href="/oauth2"><div id="login-btn"></div></a>
+      </div> 
+    -->
+  </body>
+</html>

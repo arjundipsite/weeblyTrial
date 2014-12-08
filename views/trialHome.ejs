@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<title> Weebly trial project - Arjun Kapoor </title>
+
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"> -->
+		<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		<script type="text/javascript" src="/js/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="/styles/style.css">
+		<script>
+			$( document ).ready(function() {
+				if (getQueryVariable('signedIn')) {
+	          // Update the app to reflect a signed in user
+	          // Hide the sign-in button now that the user is authorized, for example:
+	              
+
+	          console.log('user is already signed in');
+	          
+	        } else {
+	          // Update the app to reflect a signed out user
+	          // Possible error values:
+	          //   "user_signed_out" - User is signed-out
+	          //   "access_denied" - User denied access to your app
+	          //   "immediate_failed" - Could not automatically log in the user
+	          console.log('User signed out : redirect to googleLogin');
+	          window.location.href ="http://localhost:1337/googleLogin";
+	        }
+			});
+
+			function getQueryVariable(variable) {
+			    var query = window.location.search.substring(1);
+			    var vars = query.split('&');
+			    for (var i = 0; i < vars.length; i++) {
+			        var pair = vars[i].split('=');
+			        if (decodeURIComponent(pair[0]) == variable) {
+			            return decodeURIComponent(pair[1]);
+			        }
+			    }
+			    console.log('Query variable %s not found', variable);
+			};
+	    </script>
+	</head>
+	<body>
+		 <script>
+		 	$(document).ready(function() {
+		 		deleteDiv();
+		 		dragTitle();
+		 		dragContent();
+		 		addPage();
+		// 		dynamicPages();
+		 	});
+		 </script>
+
+		<div id="header">
+			<img src="/images/Weebly-Logo.png" id="img1" />
+			<button id="signoutButton">Logout</button>
+		</div>
+		<div id="content">
+			<div id="row">
+				<div class="left-column">
+					<ul class="left-content">
+						<li class="list-content">
+							<h5 style="top: 0px; width: 100%; color: #9CAAB6; padding-top: 5px">Templates</h5>
+							<div id="page1">
+
+							<div class="list-sub-content">
+								<div class="sub-content-pages">
+									<button class="page-button" type="button" contenteditable="true">Page
+										<div id="close-btn"></div>
+									</button>
+								</div>
+								<!-- {{#each pages}}
+						            <div class="list-sub-content" id="page{{id}}">
+						            	<input class="inputs" placeholder="{{title}}" readonly name="page-title" maxlength="12" />
+						              	<img class="page-tab-settings-icons page-edit" src="assets/page-tab-edit-icon.png">
+						              	<img class="page-tab-settings-icons page-delete" src="assets/page-tab-delete-icon.png">
+						              	<div class="list-sub-content"></div>
+						            </div>
+						        {{/each}} -->
+						        <!-- <div class="page-tab" id="page-tab-new"> -->
+									<input type="text" class="inputs" placeholder="ADD NEW PAGE" name="page-title-form" maxlength="10" />
+									<div id="sub-content-icon">
+									</div>
+								<!-- </div> -->
+							</div>
+						</li>
+						<li class="list-content">
+							<h5 style="top: 0px; width: 100%; color: #9CAAB6; padding-top: 5px">Elements</h5>
+							<ul class="left-content">
+								<li class="element-list-item" id="list-item1">
+									<div class="icon1" draggable="true">
+										<!-- <p class="icon-title"> Title </p> -->
+									</div>
+									<!-- <div class="title-box">
+										<span class="icon-title"> Title </span>
+									</div> -->
+								</li>
+								<li class="element-list-item" id="list-item2" draggable="true">
+									<div class="icon2">
+										<!-- <p class="icon-title"> Text </p> -->
+									</div>
+									<!-- <div class="title-box">
+										<span class="icon-title"> Text </span>
+									</div> -->
+								</li>
+								<li class="element-list-item" id="list-item3" draggable="true">
+									<div class="icon3">
+										<!-- <p class="icon-title"> Image </p> -->
+									</div>
+									<!-- <div class="title-box">
+										<span class="icon-title"> Image </span>
+									</div> -->
+								</li>
+								<li class="element-list-item" id="list-item4" draggable="true">
+									<div class="icon4">
+										<!-- <p class="icon-title"> Nav </p> -->
+									</div>
+									<!-- <div class="title-box">
+										<span class="icon-title"> Nav </span>
+									</div> -->
+								</li>
+							</ul>
+						</li>
+						<li class="list-content">
+							<h5 style="top: 0px; width: 100%; color: #9CAAB6; padding-top: 5px">Settings</h5>
+							<div class="grid-settings">
+								<p id="site-grid"> Site Grid </p>
+								<hr>
+								<input id="toggle-switch" type="checkbox">
+								<label for="toggle-switch"><span>Grid</span></label>
+								<!-- <div id="toggle-switch"></div> -->
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="right-column">
+					<div class="page-view">
+						<div id="pages">
+							<button class="btn" type="button">Page</button>
+						</div>
+					</div>
+					<br><br><br><br> 
+					<div class="img-section">
+						<div id="images">
+							<div id="img-icon">
+								<span id="img-title"> Add Image </span>
+								<span id="img-title-text"> + </span>
+								<!-- <div id="img-upload"></div> -->
+							</div>
+						</div>
+					</div>
+					<div class="site-content">
+						<div id="add-title" contenteditable="true">Add Title Here
+							<a class="delete-title" href="#" contenteditable="false"></a>
+						</div>
+						<br><br>
+						<div id="title-content" contenteditable="true">
+							Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque quis porttitor ligula. Duis hendrerit turpis neque, nec suscipit mauris sodales quis. Donec faucibus, ex id scelerisque pretium, nibh nisi laoreet sapien, nec malesuada lectus lorem in ligula. Pellentesque pellentesque interdum consectetur. Praesent et iaculis enim. Nam nisl risus, sodales sit amet egestas et, egestas nec leo. Vivamus sagittis erat quis varius vestibulum. In leo ante, fermentum in libero ac, lobortis consectetur massa. Pellentesque sodales ultricies justo vitae aliquam.
+							<a class="delete-content" href="#" contenteditable="false"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,432 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+/*log in css*/
+
+#signoutButton {
+	position: relative;
+	float: right;
+	top: 11px;
+	right: 10px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	background: transparent;
+}
+
+#header {
+	/*background-image: url("/images/Weebly-Logo.png") no-repeat;*/
+	width: 100%;
+	height: 40px;
+	background-color: #518DCA;
+	position: fixed;
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 1);
+	-moz-box-shadow:    0px 1px 1px 0px rgba(0, 0, 0, 1);
+	box-shadow:         0px 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+#img1 {
+	padding-left: 30px;
+}
+
+/*#content {
+	box-shadow: 10px 10px 5px #888888;
+}*/
+
+/* CSS for left column starts here */
+
+.left-column {
+	position: fixed;
+	background: #21384C;
+	width: 18%;
+	top: 40px;
+	left: 0;
+	bottom: 0;
+}
+
+.right-column {
+	position: absolute;
+	left: 250px;
+	top: 40px;
+	right: 0;
+	bottom: 0;
+	padding: 0 0 0 50px;
+	z-index: -1;
+	min-height: 130vh;
+	width: 74%;
+
+}
+
+.page-view {
+	width: 100%;
+	height: 100px;
+	padding: 20px 20px 20px 20px;
+}
+
+.img-section {
+	width: 100%;
+	height: 300px;
+	padding: 0 20px 20px 20px;
+}
+
+.site-content {
+	width: 100%;
+	height: 300px;
+	padding: 50px 20px 20px 20px;
+}
+
+.left-content {
+	height: 100%;
+	margin: 0;
+	padding: 5px 0 0 0;
+	list-style: none;
+}
+
+.list-content {
+/*	list-style: none;
+*/	padding-top: 20px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.list-content h5 {
+	background: #495F74;
+	height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0;
+	margin: 0;
+	border-top: 2px solid #3A546B;
+}
+
+.list-sub-content {
+	padding: 20px 0 20px 45px;
+	/*background: transparent url("/images/Add-Delete-Edit-Icons.png") no-repeat;
+	background-position: 162px -4px;*/
+}
+
+#sub-content-icon {
+	background: url("/images/Add-Delete-Edit-Icons.png") no-repeat;
+	background-position: -13px -11px;
+	width: 15px;
+	height: 17px;
+	position: relative;
+	display: inline-block;
+	right: 32px;
+	top: 5px;
+	cursor: pointer;
+}
+
+.inputs {
+	-moz-border-radius: 3px;
+ 	border-radius: 3px;
+    border: 2px solid #496077;
+    padding:5px 0 9px 10px;
+	width: 68%;
+	background: transparent;
+	/*background: transparent url("/images/Add-Delete-Edit-Icons.png") no-repeat;
+	background-position: 115px -4px;*/
+	cursor: default;
+	color: #fff;
+	font-size: 12px;
+}
+
+::-webkit-input-placeholder { color: #496077; font-size: 11px; font-weight: bold; padding-top: 3px; }
+::-moz-placeholder { color: #496077;font-size: 11px; font-weight: bold; padding-top: 3px; } /* firefox 19+ */
+:-ms-input-placeholder { color: #496077; font-size: 11px; font-weight: bold; padding-top: 3px; } /* ie */
+input:-moz-placeholder { color: #496077; font-size: 11px; font-weight: bold; padding-top: 3px; }
+
+.page-button {
+	border-radius: 3px;
+	border: 2px solid #518DCA;
+	
+	padding: 5px 0 9px 10px;
+	width: 75%;
+	background: #518DCA;
+	cursor: default;
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: left;
+	margin: 0 0 8px 0;
+}
+
+#close-btn {
+	/*background: url("/images/Add-Delete-Edit-Icons.png") no-repeat;*/
+	background-position: -34px -10px;
+	width: 35px;
+	height: 17px;
+	position: relative;
+	display: inline-block;
+	left: 65px;
+	top: 3px;
+	cursor: pointer;
+}
+
+#close-btn:hover{
+    background: url("/images/Add-Delete-Edit-Icons.png");
+    background-position: -34px -10px;
+	width: 35px;
+	height: 17px;
+	position: relative;
+	/*display: inline-block;*/
+	left: 65px;
+	top: 3px;
+	cursor: pointer;
+    /*display: inline-block;*/
+}
+
+.element-list-item {
+	background: #31485F;
+	padding: 10px 0 0 30px;
+	/*border: 1px solid #3A546B;*/
+	display: inline-block;
+	width: 37%;
+}
+
+.icon1 {
+	background: url("/images/Element-Icons.png") -7px 0;
+	width: 56px;
+	height: 79px;
+}
+
+.icon2 {
+	background: url("/images/Element-Icons.png") 170px 0;
+	width: 55px;
+	height: 79px;
+}
+
+.icon3 {
+	background: url("/images/Element-Icons.png") 117px 0;
+	width: 55px;
+	height: 79px;
+}
+
+.icon4 {
+	background: url("/images/Element-Icons.png") 63px 0;
+	width: 55px;
+	height: 79px;
+}
+
+/*.icon-title {
+	font-size: 10px; 
+	color: #194775; 
+	position: absolute;
+	top: 97px;
+	left: 44px;
+	text-transform: uppercase;
+}*/
+
+/*.title-box {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.icon-title {
+	line-height: 14px;
+	max-height: 34px;
+	max-width: 90px;
+	font-weight: normal;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+}*/
+
+#site-grid {
+	position: relative;
+	text-transform: uppercase;
+	color: #496077;
+	font-size: 12px;
+	padding:5px 0 9px 45px;
+	font-weight: bold;
+
+}
+
+hr {
+	border-color: rgba(66, 54, 54, 0.42);
+}
+
+/*#toggle-switch {
+	background: url(/images/Toggle-Switch.png) 0 0;
+	position: absolute;
+	top: 33px;
+	right: 50px;
+	width: 60px;
+	height: 30px;
+	border: none;
+}*/
+
+label {
+    color: transparent;
+    background: url('/images/Toggle-Switch.png') 0 0  no-repeat;
+    display: block;
+    position: relative;
+    text-indent: 100%;
+    top: -55px;
+	left: 157px;
+    width: 60px; 
+    height: 30px;
+    -webkit-transition: background-position .3s ease;
+    -moz-transition: background-position .3s ease;
+    cursor: pointer;
+    font-size: .01em;
+    float: left;
+}
+
+input[type=checkbox] {
+    display: none;
+    /*visibility: hidden;*/
+}
+
+label span {
+    background: url('/images/Toggle-Switch.png') -6px -53px no-repeat;
+    /*border: 0px solid transparent;
+    border-radius: 14px;
+    box-shadow: 0 1px 3px #000, 0 2px 13px #000;*/
+    content: "";
+    display: block;
+    position: absolute; 
+    top: 3px;
+    left: -45px;
+    /*right: 52px;*/
+    width: 53px; 
+    height: 28px;
+    -webkit-transition: left .3s ease;
+    -moz-transition: left .3s ease;
+}
+
+input[type=checkbox]:checked + label {
+    background-position: 0 0;
+}
+
+input[type=checkbox]:checked + label span {
+    left: 40px;
+}
+
+/* CSS for left column ends here */
+
+/* CSS for right column starts here */
+
+.btn {
+	background: #9DAFC0;
+	background-image: -webkit-linear-gradient(top, #9DAFC0, #9DAFC0);
+	background-image: -moz-linear-gradient(top, #9DAFC0, #9DAFC0);
+	background-image: -ms-linear-gradient(top, #9DAFC0, #9DAFC0);
+	background-image: -o-linear-gradient(top, #9DAFC0, #9DAFC0);
+	background-image: linear-gradient(to bottom, #9DAFC0, #9DAFC0);
+	-webkit-border-radius: 5;
+	-moz-border-radius: 5;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 16px;
+	padding: 10px 40px 10px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 2px solid #809CB3;
+}
+
+.btn:hover {
+	text-decoration: none;
+}
+
+#images {
+	background: rgba(2, 2, 2, 0.05);
+	width: 90%;
+	height: 300px;
+	-webkit-border-radius: 5;
+	-moz-border-radius: 5;
+	border-radius: 5px;
+	border: 2px solid rgba(137, 158, 178, 0.47);
+}
+
+#img-icon {
+	background: url("/images/Image-Placeholder.png");
+	width: 14%;
+	height: 125px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 70px;
+
+}
+
+#img-title {
+	position: absolute;
+	top: 128px;
+	font-size: 12px;
+	left: 25px;
+	color: #BFC9D3;
+	text-transform: uppercase;
+}
+
+#img-title-text {
+	position: absolute;
+	top: 123px;
+	font-size: 18px;
+	left: 100px;
+	color: #BFC9D3;
+}
+
+/*#img-upload {
+	background: url("/images/Add-Delete-Edit-Icons.png") no-repeat;
+	background-position: -13px -11px;
+	width: 15px;
+	height: 17px;
+	position: relative;
+	display: inline-block;
+	right: 32px;
+	top: 5px;
+}
+*/
+
+#add-title {
+	position: absolute !important;
+	font-size: 1.7em !important;
+	color: rgb(71, 98, 121) !important;
+	margin-top: 20px !important;
+	width: 100%;
+	padding: 0;
+	text-decoration: none;
+}
+
+#title-content {
+	position: absolute;
+	font-size: 13px;
+	bottom: -100px;
+	line-height: 200%;
+	color: rgb(93, 117, 140);
+	width: 85%;
+}
+
+.delete-title {
+	position: relative;
+	background: url("/images/Delete-Element.png") -48px 0;
+	height: 50px;
+	width: 50px;
+	left: 235px;
+	bottom: 72px;
+}
+
+#add-title:hover .delete-title {
+	display: block;
+}
+
+.delete-content {
+	position: absolute;
+	background: url("/images/Delete-Element.png") -48px 0;
+	height: 50px;
+	width: 50px;
+	left: 650px;
+	bottom: 120px;
+}
+
+
+#title-content:hover .delete-content {
+	display: block;
+}
+/* CSS for right column ends here */
