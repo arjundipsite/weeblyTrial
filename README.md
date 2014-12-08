@@ -1,4 +1,0 @@
-weeblyTrial
-===========
-
-Weebly Trial Project
